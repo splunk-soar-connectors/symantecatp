@@ -6,7 +6,7 @@
     "package_name": "phantom_symantecatp",
     "type": "endpoint",
     "license": "Copyright (c) 2017-2019 Splunk Inc.",
-    "main_module": "symantecatp_connector.pyc",
+    "main_module": "symantecatp_connector.py",
     "app_version": "1.0.12",
     "utctime_updated": "2021-11-10T18:55:02.000000Z",
     "product_vendor": "Symantec",
