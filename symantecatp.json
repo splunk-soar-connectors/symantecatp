@@ -12,7 +12,8 @@
     "product_vendor": "Symantec",
     "product_name": "Symantec ATP",
     "product_version_regex": ".*",
-    "min_phantom_version": "4.0.1068",
+    "python_version": "2.7",
+    "min_phantom_version": "4.10.0.40961",
     "logo": "logo_symantec.svg",
     "logo_dark": "logo_symantec_dark.svg",
     "configuration": {
@@ -80,7 +81,7 @@
             "type": "ingest",
             "read_only": true,
             "description": "Ingest incidents",
-            "verbose": "For the first poll, ingest all the atp incidents during past number of days set in <b>first_scheduled_ingestion_span</b>, not more than the limit set in <b>first_scheduled_ingestion_limit</b>. Subsequent polls ingest new or updated incidents. The incidents are sorted in descending order based on the priority and updated time.<table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>externalAddress, internalAddress, deviceAddress, destinationAddress, sourcefileAddress, dataSourceIPAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>sourceDnsDomain</td></tr><tr><td>URL</td><td>URL Artifact</td><td>dataSourceURL, intrusionURL</td></tr><tr><td>Endpoint</td><td>Endpoint Artifact</td><td>deviceUid</td></tr><tr><td>Email</td><td>Email Artifact</td><td>sourceEmailAddress, sourceAddress, receiverAddress</td></tbody></table>",
+            "verbose": "For the first poll, ingest all the atp incidents during past number of days set in <b>first_scheduled_ingestion_span</b>, not more than the limit set in <b>first_scheduled_ingestion_limit</b>. Subsequent polls ingest new or updated incidents. The incidents are sorted in descending order based on the priority and updated time.<table><tbody><tr class='plain'><th>IOC</th><th>Artifact Name</th><th>CEF Field</th></tr><tr><td>Address IPv4</td><td>IP Artifact</td><td>externalAddress, internalAddress, deviceAddress, destinationAddress, sourcefileAddress, dataSourceIPAddress</td></tr><tr><td>File</td><td>File Artifact</td><td>fileHashMd5, fileHashSha256, fileName</td></tr><tr><td>Host</td><td>Domain Artifact</td><td>sourceDnsDomain</td></tr><tr><td>URL</td><td>URL Artifact</td><td>dataSourceURL, intrusionURL</td></tr><tr><td>Endpoint</td><td>Endpoint Artifact</td><td>deviceUid</td></tr><tr><td>Email</td><td>Email Artifact</td><td>sourceEmailAddress, sourceAddress, receiverAddress</td></tbody></table>.",
             "parameters": {
                 "container_count": {
                     "description": "Maximum number of containers to ingest",

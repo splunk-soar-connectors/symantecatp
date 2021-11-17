@@ -776,7 +776,7 @@ class SymantecatpConnector(BaseConnector):
         try:
             input_dict_str = json.dumps(input_dict, sort_keys=True)
         except Exception as e:
-            print str(e)
+            print(str(e))
             self.debug_print('Handled exception in _create_dict_hash', e)
             return None
 
@@ -917,7 +917,8 @@ class SymantecatpConnector(BaseConnector):
         else:
             return action_result.set_status(phantom.APP_ERROR, "The given hash appears to be malformed")
 
-        ret_val, response = self._make_rest_call(SYMANTEC_HUNT_FILE.format(the_hash, hash_type), action_result, auth_mode='Bearer', headers={}, method='get')
+        ret_val, response = self._make_rest_call(SYMANTEC_HUNT_FILE.format(the_hash, hash_type), action_result, auth_mode='Bearer', 
+            headers={}, method='get')
 
         if phantom.is_fail(ret_val):
             return ret_val
@@ -965,7 +966,7 @@ if __name__ == '__main__':
     pudb.set_trace()
 
     if (len(sys.argv) < 2):
-        print "No test json specified as input"
+        print("No test json specified as input")
         exit(0)
 
     with open(sys.argv[1]) as f:
@@ -976,6 +977,6 @@ if __name__ == '__main__':
         connector = SymantecatpConnector()
         connector.print_progress_message = True
         ret_val = connector._handle_action(json.dumps(in_json), None)
-        print (json.dumps(json.loads(ret_val), indent=4))
+        print(json.dumps(json.loads(ret_val), indent=4))
 
     exit(0)
