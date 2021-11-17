@@ -917,8 +917,8 @@ class SymantecatpConnector(BaseConnector):
         else:
             return action_result.set_status(phantom.APP_ERROR, "The given hash appears to be malformed")
 
-        ret_val, response = self._make_rest_call(SYMANTEC_HUNT_FILE.format(the_hash, hash_type), action_result, auth_mode='Bearer', 
-            headers={}, method='get')
+        ret_val, response = self._make_rest_call(SYMANTEC_HUNT_FILE.format(the_hash, hash_type),
+                                                action_result, auth_mode='Bearer', headers={}, method='get')
 
         if phantom.is_fail(ret_val):
             return ret_val
